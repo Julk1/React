@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { Contacts } from './components/Contacts';
+import { MyPhoto } from './components/MyPhoto';
+import { Experience } from './components/Experience';
+import '../src/styles/style copy.css'
+
+const photoLink = './my-photo.jpg';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  return <div className='main-theme'>
+         <div className='grid-container'>
+            <div className='grid-item-1'>
+    
+              <div className='photo'>
+                <MyPhoto imageLink = {photoLink} />
+                </div>
+  
+            <Contacts/>
+            </div>
+
+         <div className='grid-item-2'>
+           <Experience/>
+
+    
+      </div>
+     </div>
     </div>
-  );
+  
 }
 
 export default App;

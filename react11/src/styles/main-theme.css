@@ -1,0 +1,16 @@
+.main-theme {
+    /* colors */
+    --color-left-column: #f7d1cd;
+    --color-right-column: #e8c2ca;
+    --color-first-name: #b392ac;
+    --color-second-name: #735d78;
+    --color-font-primary: #1E1E1E;
+    --collor-border: #1E1E1E;
+    
+    /* sizes */
+    --space-left-column: 10px 40px 15px;
+    --space-padding-top: 5px;
+    --space-line-height: 5px;
+    --font-size-primary: 13px;
+    }
+  
