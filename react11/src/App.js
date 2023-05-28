@@ -1,10 +1,13 @@
 
+import { useState } from 'react';
 import { Contacts } from './components/Contacts';
 import { MyPhoto } from './components/MyPhoto';
 import { Experience } from './components/Experience';
+import WorkExperienceItem from './components/WorkExperienceItem';
+import WorkExperienceForm from './components/WorkExperienceForm';
 import { Counter } from './components/Counter';
-import WorkExperienceDetails from './components/WorkExperienceDetails';
-import AddExperienceForm from './components/AddExperienceForm';
+
+
 
 
 
@@ -21,7 +24,9 @@ function App() {
 
   }
 
-  return <div className='main-theme'>
+  return (
+
+   <div className='main-theme'>
          <div className='grid-container'>
             <div className='grid-item-1'>
     
@@ -33,22 +38,27 @@ function App() {
             </div>
 
        
+          <div className='grid-item-2'>
+
 
            <Experience/>
+
 
            {workExperienceItems.map(item => (
           <WorkExperienceItem key={item.name} {...item} />
         ))}
-        <WorkExperienceForm onAddItem={addWorkExperience} />
+          <WorkExperienceForm onAddItem={addWorkExperience} />
+           
+          <Counter/>
 
-
-    <Counter/>
+   
   
     
       </div>
      </div>
+     </div>
    
-  
+  )
 }
 
 export default App;
